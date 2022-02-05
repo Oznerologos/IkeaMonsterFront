@@ -1,0 +1,13 @@
+<div class="container">
+    <form class="form">
+        <label for="mail">Email : </label>
+        <input type="text" placeholder="Email" id="mail" [formControl]="mail">
+
+        <label for="pass">Mot de passe : </label>
+        <input type="password" id="pass" placeholder="Mot de passe" [formControl]="password">
+        <a (click)="connect()" class="button">Connexion</a>
+    </form>
+    <div *ngIf = "error" class="error">
+        <span>Vous avez saisis un mauvais couple mail/mot de passe</span>
+    </div>
+</div>

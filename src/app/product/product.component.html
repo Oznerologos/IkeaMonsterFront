@@ -1,0 +1,67 @@
+<header class="p-3 mb-3 border-bottom">
+    <div class="spacing">
+        <a routerLink="/listProduct" class="btn btn-secondary btn-back"><i class="fas fa-arrow-left"></i></a>
+    </div>
+</header>
+
+<article class="spacing update-form">
+
+    <h1>Modifier</h1>
+    <h4 class="text-secondary mb-4">{{product.name}}</h4>
+
+    <form class="update-form-container">
+
+        <div class="mb-3">
+            <label for="name">Nom</label>
+            <input type="text" class="form-control" id="name" placeholder="Nom" value="{{product.name}}" [formControl]="name" >
+        </div>
+
+        <div class="mb-3">
+            <label for="image">Image</label> <br>
+            <img src="{{product.img}}" alt="">
+            <input type="text" class="form-control" id="image" [formControl]="img" placeholder="URL de l'image">
+        </div>
+
+        <div class="mb-3">
+            <label for="price">Prix</label>
+
+            <input type="number" class="form-control" id="price" [formControl]="price">
+        </div>
+
+        <div class="mb-3">
+            <label for="promotion">Promotion</label>
+
+            <input type="number" class="form-control" id="promotion" [formControl]="promotion">
+        </div>
+
+        <div class="mb-3">
+            <label for="color">Couleur</label>
+            <select id="color" class="form-control" [formControl]="color" >
+                <option selected value="blue">Bleu</option>
+                <option value="red">Rouge</option>
+                <option value="brown">Marron</option>
+                <option value="black">Noir</option>
+                <option value="yellow">Jaune</option>
+                <option value="orange">Orange</option>
+                <option value="green">Vert</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="category">Categorie</label>
+            <select id="category" class="form-control" [formControl]="category">
+                <option selected value="lounge">Salon</option>
+                <option value="toilet">Toilettes</option>
+                <option value="bedroom">Chambre</option>
+                <option value="office">Bureau</option>
+                <option value="kicthen">Cuisine</option>
+            </select>
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-primary" (click)="updateProduct()"><i class="fas fa-save"></i></a>
+            <a class="btn btn-outline btn-delete" (click)="deleteProduct()" ><i class="fas fa-trash" ></i></a>
+        </div>
+    </form>
+
+</article>

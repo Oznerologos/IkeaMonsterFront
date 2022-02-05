@@ -1,0 +1,51 @@
+<header class="p-3 mb-3 border-bottom">
+    <div class="spacing">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li class="nav-link px-2 link-dark">Page d'administration</li>
+            </ul>
+
+            <a routerLink="/addProduct" class="btn btn-primary">Ajouter un meuble</a>
+        </div>
+    </div>
+</header>
+
+<article class="spacing products-list">
+
+    <!-- <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav> -->
+
+    <section>
+        <div class="card" *ngFor="let product of products">
+            <img class="card-img-top" src={{product.img}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{product.name}} </h5>
+                <p class="card-text"> {{product.price}}€</p>
+                <p> {{product.color}} </p>
+                <p> {{product.promotion}} </p>
+                <div class="d-flex justify-content-around btn-toolbar">
+                    <a href="/product/{{product.id}}" class="btn btn-outline btn-update"><i class="fas fa-pen"></i></a>
+                    <a class="btn btn-outline btn-delete" (click) = "deleteProduct(product.id)" > <i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav> -->
+
+</article>

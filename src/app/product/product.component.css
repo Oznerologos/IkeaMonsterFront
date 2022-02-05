@@ -1,0 +1,112 @@
+.spacing {
+    text-align: center;
+    padding: 0 2rem;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .spacing {
+      padding: 0 8rem;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .spacing {
+      padding: 0 12rem;
+    }
+  }
+  .spacing .pagination {
+    justify-content: center;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing .pagination {
+      justify-content: left;
+    }
+  }
+  .spacing .btn-primary {
+    background-color: #7535dc;
+    border-color: #7535dc;
+  }
+  .spacing .btn-primary:hover {
+    background-color: #672ec1;
+    border-color: #672ec1;
+  }
+  .spacing .btn-back {
+    width: 100%;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing .btn-back {
+      width: auto;
+    }
+  }
+  .spacing .btn-outline {
+    background-color: transparent;
+    border-color: #cccccc;
+  }
+  .spacing .btn-outline.btn-update:hover {
+    background-color: #7535dc;
+    color: #ffffff;
+  }
+  .spacing .btn-outline.btn-delete:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+  }
+  .spacing.products-list section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .spacing.products-list section .card {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing.products-list section .card {
+      width: auto;
+      margin: 0 1rem 1rem 0;
+    }
+  }
+  .spacing.products-list section .card .btn-update {
+    width: 50%;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing.products-list section .card .btn-update {
+      width: 70%;
+    }
+  }
+  .spacing.products-list section .card .btn-delete {
+    width: 50%;
+  }
+  @media screen and (min-width: 576px) {
+    .spacing.products-list section .card .btn-delete {
+      width: 30%;
+    }
+  }
+  .spacing.products-list section .card img {
+    margin: auto;
+  }
+  .spacing.products-list section .card-img-top {
+    float: left;
+    width: 210px;
+    height: 210px;
+    object-fit: scale-down;
+  }
+  .spacing .update-form-container .actions, .spacing .add-form-container .actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .spacing .update-form-container .actions .btn, .spacing .add-form-container .actions .btn {
+    width: 200px;
+  }
+  .spacing .update-form-container .actions .btn.btn-delete, .spacing .add-form-container .actions .btn.btn-delete {
+    margin-left: 1rem;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  
+  img {
+    width: 250px;
+  }
